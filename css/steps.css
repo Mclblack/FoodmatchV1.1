@@ -21,7 +21,6 @@ body{
         "cc cc cc"
         "foot foot foot";
     position:relative;
-    display:none;
 }
 
 .logo-container {
@@ -216,6 +215,7 @@ footer {
         "sc sc sc"
         "foot foot foot";
     position:relative;
+    display:none;
    
 }
 
