@@ -20,3 +20,4 @@ var patterns = {
     pt7 : "img/ct-patterns/pattern-7.svg",
     
 }
+
