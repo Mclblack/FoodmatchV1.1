@@ -23,8 +23,8 @@ var patterns = {
 var categories = {
     indian1 : "Meat",
     indian2 : "Veggie",
-//    meat1, veggie1 : "Spicy",
-//    meat2, veggie2 : "No Spicy"
+    meat1 : "Spicy",
+    meat2 : "No Spicy"
 }
 
 /*=======   PKG  ==============*/
@@ -53,6 +53,10 @@ var handler = {
         if(props == "sel1"){
             ChangeSel1IconUI(value);
         }
+        
+        if(props == "sel2"){
+            ChangeSel2IconUI(value);
+        }
     }
 }
 
@@ -71,9 +75,22 @@ function Step1(el){
     proxy.ctName2 = pkg.ctName2;
     proxy.sel1 = pkg.sel1;
     
-<<<<<<< HEAD
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
+}
+
+function Step2(el){
+    if(el.textContent == "Meat"){
+        pkg.ctName1 =  categories.meat1;
+        pkg.ctName2 = categories.meat2;
+        pkg.sel2 = selection.meat;
+    }
+    
+    proxy.ctName1 = pkg.ctName1;
+    proxy.ctName2 = pkg.ctName2;
+    proxy.sel2 = pkg.sel2;
+    
+    
 }
 
 /*=======   UI FUNCTIONS     ==========*/
@@ -89,7 +106,9 @@ function ChangeCtNameUI2(val){
 function ChangeSel1IconUI(val){
     document.querySelector(".sel1").src = val;
 }
-=======
+
+function ChangeSel2IconUI(val){
+    document.querySelector(".sel2").src = val;
 }
 
->>>>>>> 80183a8094e0234807858718ad5c2d16c0ffaee0
+

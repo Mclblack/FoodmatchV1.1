@@ -356,7 +356,7 @@ footer {
     justify-content:center;
 }
 
-.sel1 {
+.sel1, .sel2 {
     width:80px;
     margin-right:10px;
 }
