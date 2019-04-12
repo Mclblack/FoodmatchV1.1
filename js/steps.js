@@ -71,6 +71,7 @@ function Step1(el){
     proxy.ctName2 = pkg.ctName2;
     proxy.sel1 = pkg.sel1;
     
+<<<<<<< HEAD
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
 }
@@ -88,3 +89,7 @@ function ChangeCtNameUI2(val){
 function ChangeSel1IconUI(val){
     document.querySelector(".sel1").src = val;
 }
+=======
+}
+
+>>>>>>> 80183a8094e0234807858718ad5c2d16c0ffaee0

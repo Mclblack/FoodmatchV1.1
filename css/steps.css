@@ -6,6 +6,7 @@ body{
 }
 
 #app1 {
+    
     background-image:url(../img/background.svg);
     background-size:contain;
     background-repeat: no-repeat;
@@ -20,6 +21,7 @@ body{
         "cc cc cc"
         "foot foot foot";
     position:relative;
+    display:none;
 }
 
 .logo-container {
@@ -49,6 +51,7 @@ footer {
     display:flex;
     align-items:center;
     justify-content:center;
+  
 }
 
 .steps {
@@ -213,7 +216,7 @@ footer {
         "sc sc sc"
         "foot foot foot";
     position:relative;
-    display:none;
+   
 }
 
 .logo-container {
@@ -257,16 +260,19 @@ footer {
     border-radius:20px;
 }
 
+
 .step2 {
     animation:pulse .8s alternate;
     animation-direction:alternate-reverse;
     animation-iteration-count: infinite;
     border:1px solid #A13324;
     background-image: linear-gradient(to bottom right,rgba(203,87,67,.8),#CB5743);
+    animation:none;
 }
 
+
 .step1, .step3 {
-    background-color:rgba(203,87,67,.6);
+    background-color:rgba(203,87,67);
 }
 
 .triangle {
@@ -352,6 +358,7 @@ footer {
 
 .sel1 {
     width:80px;
+    margin-right:10px;
 }
 
 /* Step 2 Animation */
