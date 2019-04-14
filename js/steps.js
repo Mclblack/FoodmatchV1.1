@@ -24,6 +24,15 @@ var categories = {
     indian1 : "Meat",
     indian2 : "Veggie",
     meat1 : "Spicy",
+<<<<<<< HEAD
+    meat2 : "No Spicy",
+    koreanJapenese1 : "Rice",
+    koreanJapenese2 : "No Rice"
+}
+
+
+
+=======
     meat2 : "No Spicy", 
     veggie1 : "Spicy",
     veggie2 : "No Spicy"
@@ -50,6 +59,7 @@ var resultDes = {
     dalchaawal : "Dal Chaawal is a very popular dish in the South Eastern region of India.  It's a mix of rice and lentil soup (Dal) and is a staple in certain parts of India. This dish is commonly, difficult to find in Canada but don't worry, FoodMatch has got you covered!  Check out the restaurents below to give Dahl Chaawal a try.",
     rajma : "This popular vegetarian dish consists of red kidney beans and a thick gravy made of many Indian spices.  It is usually served on a bed of rice and commonly consists of chopped onions, tomatoes, ginger, garlic and many fresh spices.  Try Rajma today at a restaurent near you!"
 }
+>>>>>>> a37d51fbfdb74f70a2fd369ece99aa312ae0f0a7
 /*=======   PKG  ==============*/
 
 var pkg = {
@@ -125,7 +135,7 @@ function Step1(el){
     
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
-}
+    }
 
 function Step2(el){
     if(pkg.sel1 == selection.indian && el.textContent == "Meat"){
@@ -184,6 +194,21 @@ function Step3(el){
     
     document.querySelector("#app3").style.display = "none";
     document.querySelector("#app4").style.display = "grid";
+}
+
+function step1KJ(el){
+    if(el.textContent == "Korean/Japenese"){
+        pkg.ctName1 = categories.koreanJapenese1;
+        pkg.ctName2 = categories.koreanJapenese2;
+        pkg.sel1 = selection.KJ;
+    }
+    
+    proxy.ctName1 = pkg.ctName1;
+    proxy.ctName2 = pkg.ctName2;
+    proxy.sel1 = pkg.sel1;
+    
+     document.querySelector("#app1").style.display = "none";
+    document.querySelector("#app2").style.display = "grid";
 }
 
 /*=======   UI FUNCTIONS     ==========*/
