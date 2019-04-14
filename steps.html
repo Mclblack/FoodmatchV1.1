@@ -27,7 +27,7 @@
             <img src="img/buttons/back.svg" id="back" onclick="BackToHome()">
         </footer>
 
-    </div>
+    </div> 
 
     <div id="app2">
         <header class="logo-container">
@@ -42,13 +42,43 @@
         </div>
         <div id="category-containers">
             <div class="categoriess ca1" onclick="Step2(this)">Meat</div>
-            <div class="categoriess ca2" onclick="IndVeggie(this)">Veggie</div>
+            <div class="categoriess ca2" onclick="Step2(this)">Veggie</div>
+        </div>
+        <div id="selection-container">
+            <div class="sel-title">Your Selection</div>
+            <div class="selection">
+                <img src="img/icons/indian.svg" class="sel1">
+                <img src="" class="sel2">
+    
+            </div>
+        </div>
+        <footer>
+            <img src="img/buttons/back.svg" id="back" onclick="BackToStep1()">
+        </footer>
+
+    </div>
+    
+    <div id="app3">
+        <header class="logo-container">
+            <img src="img/logo.svg" id="logo">
+        </header>
+        <div id="steps-container">
+            <div class="steps step1">STEP 1</div>
+            <div class="triangle"></div>
+            <div class="steps step2">STEP 2</div>
+            <div class="triangle"></div>
+            <div class="steps step3">STEP 3</div>
+        </div>
+        <div id="category-containers">
+            <div class="categoriess ca3" onclick="Step3(this)">Meat</div>
+            <div class="categoriess ca4" onclick="Step3(this)">Veggie</div>
         </div>
         <div id="selection-container">
             <div class="sel-title">Your Selection</div>
             <div class="selection">
                 <img src="img/icons/indian.svg" class="sel1">
                 <img src="img/icons/%20veggie-icon.svg" class="sel2">
+    
             </div>
         </div>
         <footer>
@@ -57,7 +87,7 @@
 
     </div>
 
-    <div id="app3">
+    <div id="app4">
         <img src="img/logo.svg" id="logo">
 
         <div id="main-cnt">
@@ -75,9 +105,9 @@
 
             <div class="descrip">
                 <div id="title">What is Papri Chaat?</div>
-                <p>Papri chaat is a popular traditional street food from India. This dish is typically a sweet, sour and tangy with a creamy & crunchy texture. Based off your selections we think that this dish is a perfect fit for you! You can find this dish locally at the restaurents listed below.</p>
+                <p id="rDes">Papri chaat is a popular traditional street food from India. This dish is typically a sweet, sour and tangy with a creamy & crunchy texture. Based off your selections we think that this dish is a perfect fit for you! You can find this dish locally at the restaurents listed below.</p>
 
-                <div id="title">Restaurant Recommendation</div>
+                <div id="res">Restaurant Recommendation</div>
                 <p>Sula Indian, Vij's, Indian Roti Kitchen, House of Dosa</p>
             </div>
 
@@ -86,8 +116,9 @@
         <div id="sel-title">Your Selections</div>
 
         <div id="icon-bar">
-            <img src="img/icons/indian.svg" class="rice-icon icons">
-            <img src="img/icons/meat-icon.svg" class="meat-icon icons">
+            <img src="img/icons/indian.svg" class="sel1 icons">
+            <img src="img/icons/meat-icon.svg" class="sel2 icons">
+            <img src="img/icons/meat-icon.svg" class="sel3 icons">
 
         </div>
 
