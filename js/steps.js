@@ -128,12 +128,11 @@ function ChangeCtNameUI2(val){
 function ChangeSel1IconUI(val){
     document.querySelector(".sel1").src = val;
 }
-<<<<<<< HEAD
+
 
 function ChangeSel2IconUI(val){
     document.querySelector(".sel2").src = val;
 }
-=======
->>>>>>> 9a7406aa696571e1886a4f765bb7af18c9b2d85b
+
 
 
