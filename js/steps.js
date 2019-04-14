@@ -24,18 +24,12 @@ var categories = {
     indian1 : "Meat",
     indian2 : "Veggie",
     meat1 : "Spicy",
-<<<<<<< HEAD
     meat2 : "No Spicy",
+    veggie1 : "Spicy",
+    veggie2 : "No Spicy",
     koreanJapenese1 : "Rice",
     koreanJapenese2 : "No Rice"
-}
-
-
-
-=======
-    meat2 : "No Spicy", 
-    veggie1 : "Spicy",
-    veggie2 : "No Spicy"
+    
 }
 
 var resultTitle = {
@@ -59,7 +53,7 @@ var resultDes = {
     dalchaawal : "Dal Chaawal is a very popular dish in the South Eastern region of India.  It's a mix of rice and lentil soup (Dal) and is a staple in certain parts of India. This dish is commonly, difficult to find in Canada but don't worry, FoodMatch has got you covered!  Check out the restaurents below to give Dahl Chaawal a try.",
     rajma : "This popular vegetarian dish consists of red kidney beans and a thick gravy made of many Indian spices.  It is usually served on a bed of rice and commonly consists of chopped onions, tomatoes, ginger, garlic and many fresh spices.  Try Rajma today at a restaurent near you!"
 }
->>>>>>> a37d51fbfdb74f70a2fd369ece99aa312ae0f0a7
+
 /*=======   PKG  ==============*/
 
 var pkg = {
@@ -175,7 +169,7 @@ function Step3(el){
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "No Spicy"){
-        pkg.sel3 = "";
+        pkg.sel3 = "none";
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
@@ -184,6 +178,34 @@ function Step3(el){
         } else {
             pkg.rTitle = resultTitle.tandoorichicken;
             pkg.rDes = resultDes.tandoorichicken;
+        }
+        
+    }
+    
+    if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "Spicy"){
+        pkg.sel3 = selection.spicy;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.spciylentilquinoacurry;
+            pkg.rDes = resultDes.spciylentilquinoacurry;
+        } else {
+            pkg.rTitle = resultTitle.indiandahl;
+            pkg.rDes = resultDes.indiandahl;
+        }
+        
+    }
+    
+    if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "No Spicy"){
+        pkg.sel3 = "none";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
         }
         
     }
