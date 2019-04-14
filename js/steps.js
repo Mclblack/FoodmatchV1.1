@@ -27,8 +27,8 @@ var categories = {
     meat2 : "No Spicy",
     veggie1 : "Spicy",
     veggie2 : "No Spicy",
-    koreanJapenese1 : "Rice",
-    koreanJapenese2 : "No Rice"
+    KJ1 : "Rice",
+    KJ2 : "No Rice"
 }
 
 
@@ -123,12 +123,12 @@ function Step1(el){
         pkg.sel1 = selection.indian;
     }
     
-     if(el.textContent == "Korean/Japenese"){
-        pkg.ctName1 = categories.koreanJapenese1;
-        pkg.ctName2 = categories.koreanJapenese2;
+     if(el.textContent == "Korean/Japanese"){
+        pkg.ctName1 = categories.KJ1;
+        pkg.ctName2 = categories.KJ2;
         pkg.sel1 = selection.KJ;
     }
-    
+    console.log(el.textContent);
     proxy.ctName1 = pkg.ctName1;
     proxy.ctName2 = pkg.ctName2;
     proxy.sel1 = pkg.sel1;
