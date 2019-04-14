@@ -14,6 +14,6 @@ function changeImg(el){
 }
 
 function BackToHome(){
-    window.location.href = "../Homepage/index.html"
+    window.location.href = "index.html"
 }
 

@@ -1,6 +1,8 @@
  function startBut(){
      document.querySelector("#get-started").style.fontSize = 30 + "pt";
-     window.location.href = "../Step1/step1.html";
+     setTimeout(function(){
+         window.location.href = "steps.html";
+     },2000);
 
  }
 
@@ -8,9 +10,15 @@ var welcomePop = document.querySelector("#popUp");
 
 function ClseBtn(){
     welcomePop.style.display = "none";
-
+    sessionStorage.setItem("EnterNum",1);
 }
 
 function BtnAbout(){
-    window.location.href = "../Aboutpage/about.html";
+    window.location.href = "about.html";
 }
+
+window.addEventListener("load", function(){
+    if(sessionStorage.getItem("EnterNum") == 1){
+        welcomePop.style.display = "none";
+    }
+})
