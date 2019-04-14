@@ -24,7 +24,9 @@ var categories = {
     indian1 : "Meat",
     indian2 : "Veggie",
     meat1 : "Spicy",
-    meat2 : "No Spicy"
+    meat2 : "No Spicy", 
+    veggie1 : "Spicy",
+    veggie2 : "No Spicy"
 }
 
 var resultTitle = {
@@ -53,10 +55,15 @@ var resultDes = {
 var pkg = {
     ctName1 : "",
     ctName2 : "",
+    ctName3 : "",
+    ctName4 : "",
     sel1 : "",
     sel2 : "",
+    sel3 : "",
     bgPt1 : "",
-    bgPt1 : ""
+    bgPt1 : "",
+    rTitle : "",
+    rDes : ""
 }
 
 /*=======   HANDLER  =========*/
@@ -69,6 +76,14 @@ var handler = {
         
         if(props == "ctName2"){
             ChangeCtNameUI2(value);
+        } 
+        
+        if(props == "ctName3"){
+            ChangeCtNameUI3(value);
+        }
+        
+        if(props == "ctName4"){
+            ChangeCtNameUI4(value);
         }
         
         if(props == "sel1"){
@@ -77,6 +92,18 @@ var handler = {
         
         if(props == "sel2"){
             ChangeSel2IconUI(value);
+        }
+        
+        if (props == "sel3"){
+            ChangeSel3IconUI(value);
+        }
+        
+        if (props == "rTitle"){
+            ChangerTitleUI(value);
+        }
+        
+        if(props == "rDes"){
+            ChangerDesUI(value);
         }
     }
 }
@@ -101,18 +128,48 @@ function Step1(el){
 }
 
 function Step2(el){
-    if(el.textContent == "Meat"){
-        pkg.ctName1 =  categories.meat1;
-        pkg.ctName2 = categories.meat2;
+    if(pkg.sel1 == selection.indian && el.textContent == "Meat"){
+        pkg.ctName3 =  categories.meat1;
+        pkg.ctName4 = categories.meat2;
         pkg.sel2 = selection.meat;
     }
     
-    proxy.ctName1 = pkg.ctName1;
-    proxy.ctName2 = pkg.ctName2;
+    if(pkg.sel1 == selection.indian && el.textContent == "Veggie"){
+        pkg.ctName3 =  categories.veggie1;
+        pkg.ctName4 = categories.veggie2;
+        pkg.sel2 = selection.veggie;
+    }
+    
+    proxy.ctName3 = pkg.ctName3;
+    proxy.ctName4 = pkg.ctName4;
     proxy.sel2 = pkg.sel2;
     
+    
     document.querySelector("#app2").style.display = "none";
-    document.querySelector("#app3").style.display = "gird";
+    document.querySelector("#app3").style.display = "grid";
+}
+
+function Step3(el){
+    if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "Spicy"){
+        pkg.sel3 = selection.spicy;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.kolhapuri;
+            pkg.rDes = resultDes.kolhapuri;
+        } else {
+            pkg.rTitle = resultTitle.kozhicurry;
+            pkg.rDes = resultDes.kozhicurry;
+        }
+        
+    }
+    
+    proxy.sel3 = pkg.sel3;
+    proxy.rTitle = pkg.rTitle;
+    proxy.rDes = pkg.rDes;
+    
+    document.querySelector("#app3").style.display = "none";
+    document.querySelector("#app4").style.display = "grid";
 }
 
 /*=======   UI FUNCTIONS     ==========*/
@@ -125,6 +182,14 @@ function ChangeCtNameUI2(val){
     document.querySelector(".ca2").innerText = val;
 }
 
+function ChangeCtNameUI3(val){
+    document.querySelector(".ca3").innerText = val;
+}
+
+function ChangeCtNameUI4(val){
+    document.querySelector(".ca4").innerText = val;
+}
+
 function ChangeSel1IconUI(val){
     document.querySelector(".sel1").src = val;
 }
@@ -134,5 +199,15 @@ function ChangeSel2IconUI(val){
     document.querySelector(".sel2").src = val;
 }
 
+function ChangeSel3IconUI(val){
+    document.querySelector(".sel3").src = val;
+}
 
+function ChangerTitleUI(val){
+    document.querySelector("#title").innerText = val;
+}
+
+function ChangerDesUI(val){
+    document.querySelector("#rDes").innerText = val;
+}
 
