@@ -164,6 +164,20 @@ function Step3(el){
         
     }
     
+    if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "No Spicy"){
+        pkg.sel3 = "";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.paprichaat;
+            pkg.rDes = resultDes.paprichaat;
+        } else {
+            pkg.rTitle = resultTitle.tandoorichicken;
+            pkg.rDes = resultDes.tandoorichicken;
+        }
+        
+    }
+    
     proxy.sel3 = pkg.sel3;
     proxy.rTitle = pkg.rTitle;
     proxy.rDes = pkg.rDes;
@@ -204,7 +218,8 @@ function ChangeSel3IconUI(val){
 }
 
 function ChangerTitleUI(val){
-    document.querySelector("#title").innerText = val;
+    document.querySelector("#foodname").innerText = val;
+    document.querySelector(".match-title").innerText = val;
 }
 
 function ChangerDesUI(val){
