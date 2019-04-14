@@ -29,8 +29,8 @@ var categories = {
     veggie2 : "No Spicy",
     koreanJapenese1 : "Rice",
     koreanJapenese2 : "No Rice"
-    
 }
+
 
 var resultTitle = {
     kolhapuri : "Kolhapuri",
@@ -121,6 +121,12 @@ function Step1(el){
         pkg.ctName1 = categories.indian1;
         pkg.ctName2 = categories.indian2;
         pkg.sel1 = selection.indian;
+    }
+    
+     if(el.textContent == "Korean/Japenese"){
+        pkg.ctName1 = categories.koreanJapenese1;
+        pkg.ctName2 = categories.koreanJapenese2;
+        pkg.sel1 = selection.KJ;
     }
     
     proxy.ctName1 = pkg.ctName1;
@@ -218,20 +224,7 @@ function Step3(el){
     document.querySelector("#app4").style.display = "grid";
 }
 
-function step1KJ(el){
-    if(el.textContent == "Korean/Japenese"){
-        pkg.ctName1 = categories.koreanJapenese1;
-        pkg.ctName2 = categories.koreanJapenese2;
-        pkg.sel1 = selection.KJ;
-    }
-    
-    proxy.ctName1 = pkg.ctName1;
-    proxy.ctName2 = pkg.ctName2;
-    proxy.sel1 = pkg.sel1;
-    
-     document.querySelector("#app1").style.display = "none";
-    document.querySelector("#app2").style.display = "grid";
-}
+
 
 /*=======   UI FUNCTIONS     ==========*/
 
