@@ -24,8 +24,12 @@ var categories = {
     indian1 : "Meat",
     indian2 : "Veggie",
     meat1 : "Spicy",
-    meat2 : "No Spicy"
+    meat2 : "No Spicy",
+    koreanJapenese1 : "Rice",
+    koreanJapenese2 : "No Rice"
 }
+
+
 
 /*=======   PKG  ==============*/
 
@@ -77,7 +81,7 @@ function Step1(el){
     
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
-}
+    }
 
 function Step2(el){
     if(el.textContent == "Meat"){
@@ -91,6 +95,21 @@ function Step2(el){
     proxy.sel2 = pkg.sel2;
     
     
+}
+
+function step1KJ(el){
+    if(el.textContent == "Korean/Japenese"){
+        pkg.ctName1 = categories.koreanJapenese1;
+        pkg.ctName2 = categories.koreanJapenese2;
+        pkg.sel1 = selection.KJ;
+    }
+    
+    proxy.ctName1 = pkg.ctName1;
+    proxy.ctName2 = pkg.ctName2;
+    proxy.sel1 = pkg.sel1;
+    
+     document.querySelector("#app1").style.display = "none";
+    document.querySelector("#app2").style.display = "grid";
 }
 
 /*=======   UI FUNCTIONS     ==========*/
