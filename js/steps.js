@@ -7,7 +7,7 @@ var selection = {
     noodles : "img/icons/noodles-icon.svg",
     rice : "img/icons/rice-icon.svg",
     soup : "img/icons/soup-icon.svg",
-    spicy : "img/icons/spicy-icon.svg"
+    spciy : "img/icons/spicy-icon.svg"
 }
 
 var patterns = {
@@ -62,7 +62,8 @@ var resultDes = {
     spciylentilquinoacurry : "This lentil curry is a so delicious due to the use of coconut milk late in the cooking process.  Try this amazing dish at one of the restaurents we've recommended below.  Many people try to make this dish but few do it as well as the restaurants below.  Enjoy!",
     indiandahl : "Dahl is a popular lentil dish, full of flavour!  It's a popular dish all over the world and is commonly flavoured with many spicy's.  It is commonly served on rice and can be made to be as spicy as you prefer.  Check out the restaurents listed below to try this delicious dish!",
     dalchaawal : "Dal Chaawal is a very popular dish in the South Eastern region of India.  It's a mix of rice and lentil soup (Dal) and is a staple in certain parts of India. This dish is commonly, difficult to find in Canada but don't worry, FoodMatch has got you covered!  Check out the restaurents below to give Dahl Chaawal a try.",
-    rajma : "This popular vegetarian dish consists of red kidney beans and a thick gravy made of many Indian spices.  It is usually served on a bed of rice and commonly consists of chopped onions, tomatoes, ginger, garlic and many fresh spices.  Try Rajma today at a restaurent near you!"
+    rajma : "This popular vegetarian dish consists of red kidney beans and a thick gravy made of many Indian spices.  It is usually served on a bed of rice and commonly consists of chopped onions, tomatoes, ginger, garlic and many fresh spices.  Try Rajma today at a restaurent near you!",
+    kimchistew: "Woah, congratulations! You've selected Kimchi Stew. This beloved Korean dish is warm, hearty, spicy and very delicious. Check out our recommendations to find this foreign  "
 }
 
 /*=======   PKG  ==============*/
@@ -154,8 +155,6 @@ function Step1(el){
    
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
-    
-    console.log(pkg.sel1);
     }
 
 
@@ -224,9 +223,6 @@ function Step2(el){
     
     document.querySelector("#app2").style.display = "none";
     document.querySelector("#app3").style.display = "grid";
-    
-    console.log(pkg.sel1);
-    console.log(pkg.sel2);
 }
 
 function Step3(el){
@@ -245,7 +241,7 @@ function Step3(el){
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "No Spicy"){
-        pkg.sel3 = "";
+        pkg.sel3 = "none";
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
@@ -273,7 +269,7 @@ function Step3(el){
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "No Spicy"){
-        pkg.sel3 = "";
+        pkg.sel3 = "none";
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
@@ -292,10 +288,6 @@ function Step3(el){
     
     document.querySelector("#app3").style.display = "none";
     document.querySelector("#app4").style.display = "grid";
-    
-    console.log(pkg.sel1);
-    console.log(pkg.sel2);
-    console.log(pkg.sel3);
 }
 
 
@@ -319,19 +311,16 @@ function ChangeCtNameUI4(val){
 }
 
 function ChangeSel1IconUI(val){
-    document.querySelector(".sel21").src = val;
-    document.querySelector(".sel31").src = val;
-    document.querySelector(".sel41").src = val;
+    document.querySelector(".sel1").src = val;
 }
 
 
 function ChangeSel2IconUI(val){
-    document.querySelector(".sel32").src = val;
-    document.querySelector(".sel42").src = val;
+    document.querySelector(".sel2").src = val;
 }
 
 function ChangeSel3IconUI(val){
-    document.querySelector(".sel43").src = val;
+    document.querySelector(".sel3").src = val;
 }
 
 function ChangerTitleUI(val){
