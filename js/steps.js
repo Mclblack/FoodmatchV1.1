@@ -28,7 +28,9 @@ var categories = {
     veggie1 : "Spicy",
     veggie2 : "No Spicy",
     KJ1 : "Rice",
-    KJ2 : "No Rice"
+    KJ2 : "No Rice",
+    rice1 : "Soup",
+    rice2 : "No Soup"
 }
 
 
@@ -149,10 +151,29 @@ function Step2(el){
         pkg.ctName4 = categories.veggie2;
         pkg.sel2 = selection.veggie;
     }
+  
+    proxy.ctName3 = pkg.ctName3;
+    proxy.ctName4 = pkg.ctName4;
+    proxy.sel2 = pkg.sel2;
+    
+      
+    if(pkg.sel1 == selection.KJ && el.textContent == "Rice"){
+        pkg.ctName3 = categories.rice1;
+        pkg.ctName4 = categories.rice2;
+        pkg.sel2 = pkg.sel2;
+    }
+    
+      if(pkg.sel1 == selection.KJ && el.textContent == "No Rice"){
+        pkg.ctName3 = categories.rice1;
+        pkg.ctName4 = categories.rice2;
+        pkg.sel2 = pkg.sel2;
+    }
+    
     
     proxy.ctName3 = pkg.ctName3;
     proxy.ctName4 = pkg.ctName4;
     proxy.sel2 = pkg.sel2;
+    
     
     
     document.querySelector("#app2").style.display = "none";
