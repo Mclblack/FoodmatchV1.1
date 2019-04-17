@@ -7,7 +7,7 @@ var selection = {
     noodles : "img/icons/noodles-icon.svg",
     rice : "img/icons/rice-icon.svg",
     soup : "img/icons/soup-icon.svg",
-    spciy : "img/icons/spicy-icon.svg"
+    spicy : "img/icons/spicy-icon.svg"
 }
 
 var patterns = {
@@ -241,7 +241,7 @@ function Step3(el){
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "No Spicy"){
-        pkg.sel3 = "none";
+        pkg.sel3 = "";
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
@@ -269,7 +269,7 @@ function Step3(el){
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "No Spicy"){
-        pkg.sel3 = "none";
+        pkg.sel3 = "";
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
@@ -311,16 +311,19 @@ function ChangeCtNameUI4(val){
 }
 
 function ChangeSel1IconUI(val){
-    document.querySelector(".sel1").src = val;
+    document.querySelector(".sel21").src = val;
+    document.querySelector(".sel31").src = val;
+    document.querySelector(".sel41").src = val;
 }
 
 
 function ChangeSel2IconUI(val){
-    document.querySelector(".sel2").src = val;
+    document.querySelector(".sel32").src = val;
+    document.querySelector(".sel42").src = val;
 }
 
 function ChangeSel3IconUI(val){
-    document.querySelector(".sel3").src = val;
+    document.querySelector(".sel43").src = val;
 }
 
 function ChangerTitleUI(val){
