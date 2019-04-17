@@ -30,7 +30,16 @@ var categories = {
     KJ1 : "Rice",
     KJ2 : "No Rice",
     rice1 : "Soup",
-    rice2 : "No Soup"
+    rice2 : "No Soup",
+    noRice1: "Noodle",
+    noRice2: "No Noodle",
+    west1: "Meat",
+    west2: "Veggie",
+    westMeat1: "Bread",
+    westMeat2: "No Bread",
+    westVeg1: "Soup",
+    westVeg2: "No Soup"
+    
 }
 
 
@@ -130,18 +139,30 @@ function Step1(el){
         pkg.ctName2 = categories.KJ2;
         pkg.sel1 = selection.KJ;
     }
+    
+     if(el.textContent == "Western"){
+        pkg.ctName1 = categories.west1;
+        pkg.ctName2 = categories.west2;
+        pkg.sel1 = selection.western;
+    }
+    
     console.log(el.textContent);
     proxy.ctName1 = pkg.ctName1;
     proxy.ctName2 = pkg.ctName2;
     proxy.sel1 = pkg.sel1;
     
+   
     document.querySelector("#app1").style.display = "none";
     document.querySelector("#app2").style.display = "grid";
     
     console.log(pkg.sel1);
     }
 
+
+
 function Step2(el){
+    
+    ////INDIAN
     if(pkg.sel1 == selection.indian && el.textContent == "Meat"){
         pkg.ctName3 =  categories.meat1;
         pkg.ctName4 = categories.meat2;
@@ -158,25 +179,48 @@ function Step2(el){
     proxy.ctName4 = pkg.ctName4;
     proxy.sel2 = pkg.sel2;
     
-      
+    /////JAPANESE/KOREAN
     if(pkg.sel1 == selection.KJ && el.textContent == "Rice"){
         pkg.ctName3 = categories.rice1;
         pkg.ctName4 = categories.rice2;
-        pkg.sel2 = pkg.sel2;
+        pkg.sel2 = selection.rice;
     }
     
       if(pkg.sel1 == selection.KJ && el.textContent == "No Rice"){
-        pkg.ctName3 = categories.rice1;
-        pkg.ctName4 = categories.rice2;
-        pkg.sel2 = pkg.sel2;
+        pkg.ctName3 = categories.noRice1;
+        pkg.ctName4 = categories.noRice2;
+        pkg.sel2 = selection.noRice;
     }
+    proxy.ctName3 = pkg.ctName3;
+    proxy.ctName4 = pkg.ctName4;
+    proxy.sel2 = pkg.sel2;
+    
+    /////WESTERN
+    
+       if(pkg.sel1 == selection.western && el.textContent == "Meat"){
+        pkg.ctName3 = categories.westMeat1;
+        pkg.ctName4 = categories.westMeat2;
+        pkg.sel2 = selection.western;
+    }
+    
+     if(pkg.sel1 == selection.western && el.textContent == "Meat"){
+        pkg.ctName3 = categories.westMeat1;
+        pkg.ctName4 = categories.westMeat2;
+        pkg.sel2 = selection.western;
+    }
+    
+      if(pkg.sel1 == selection.western && el.textContent == "Veggie"){
+        pkg.ctName3 = categories.westVeg1;
+        pkg.ctName4 = categories.westVeg2;
+        pkg.sel2 = selection.western;
+    }
+    
+    
     
     
     proxy.ctName3 = pkg.ctName3;
     proxy.ctName4 = pkg.ctName4;
     proxy.sel2 = pkg.sel2;
-    
-    
     
     document.querySelector("#app2").style.display = "none";
     document.querySelector("#app3").style.display = "grid";
