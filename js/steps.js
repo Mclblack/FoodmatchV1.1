@@ -15,7 +15,7 @@ var selection = {
     spicy : "img/icons/spicy-icon.svg",
     bread : "img/icons/bread-icon.svg"
 }
-
+ 
 var patterns = {
     pt1 : "img/ct-patterns/pattern-1.svg",
     pt2 : "img/ct-patterns/pattern-2.svg",
@@ -131,6 +131,7 @@ var resultDes = {
     butternut: "This thick soup, rich soup is a serious flavour bommb! Made with roasted Butternut squash and a variet of vegetables this soup is perfect for a cool, wet Vancouver day. Try this soup today and experience the warmth and comfort of this delicious dish. We've searched high and low for the best Butternut Squash Soup in Vancouver, check out t]he restaurent recommendations best version of this soup now!",
     quinoa: "Quinoa is an ancient grain, with amazing health benefits. This grain can be combined into many dishes but it is largely considered best amongst some fresh vegetables in salad form. Find the most delicious Quinoa Salad's in Vancouver in our restaurent recommendation section listed below. Enjoy!",
     kalePesto: "Made with kale, omega 3 rich hemp seeds and flaxseed oil, this deliciously healthy pasta is an amazing dish. It is far from your typical pasta and that departure is welcomed here at FoodMatch. Give this unqiue and lovely recipe a try today and find out what all the talk is all about. Check out our restaurent reocomendations below and enjoy!"
+}
 
 /*=======   PKG  ==============*/
 
@@ -145,7 +146,8 @@ var pkg = {
     bgPt1 : "",
     bgPt1 : "",
     rTitle : "",
-    rDes : ""
+    rDes : "",
+    foodimg : ""
 }
 
 /*=======   HANDLER  =========*/
@@ -181,11 +183,15 @@ var handler = {
         }
         
         if (props == "rTitle"){
-            ChangerTitleUI(value);
+            ChangeTitleUI(value);
         }
         
         if(props == "rDes"){
-            ChangerDesUI(value);
+            ChangeDesUI(value);
+        }
+        
+        if(props == "foodimg"){
+            ChangeFoodImgUI(value);
         }
     }
 }
@@ -278,6 +284,9 @@ function Step2(el){
     step3.style.display = "grid";
 }
 
+/*=========================   STEP 3   ================================*/
+
+
 function Step3(el){
     
     /*==================  IDIAN  ========================*/
@@ -289,9 +298,11 @@ function Step3(el){
         if(num1 < num2){
             pkg.rTitle = resultTitle.kolhapuri;
             pkg.rDes = resultDes.kolhapuri;
+            pkg.foodimg = imgs.kolhapuri;
         } else {
             pkg.rTitle = resultTitle.kozhicurry;
             pkg.rDes = resultDes.kozhicurry;
+            pkg.foodimg = imgs.kozhicurry;
         }
         
     }
@@ -303,9 +314,11 @@ function Step3(el){
         if(num1 < num2){
             pkg.rTitle = resultTitle.paprichaat;
             pkg.rDes = resultDes.paprichaat;
+            pkg.foodimg = imgs.paprichaat;
         } else {
             pkg.rTitle = resultTitle.tandoorichicken;
             pkg.rDes = resultDes.tandoorichicken;
+            pkg.foodimg = imgs.tandoorichicken;
         }
         document.querySelector(".sel43").style.display = "none";
     }
@@ -317,9 +330,11 @@ function Step3(el){
         if(num1 < num2){
             pkg.rTitle = resultTitle.spciylentilquinoacurry;
             pkg.rDes = resultDes.spciylentilquinoacurry;
+            pkg.foodimg = imgs.spciylentilquinoacurry;
         } else {
             pkg.rTitle = resultTitle.indiandahl;
             pkg.rDes = resultDes.indiandahl;
+            pkg.foodimg = imgs.indiandahl;
         }
         
     }
@@ -331,11 +346,13 @@ function Step3(el){
         if(num1 < num2){
             pkg.rTitle = resultTitle.dalchaawal;
             pkg.rDes = resultDes.dalchaawal;
+            pkg.foodimg = imgs.dalchaawal;
         } else {
             pkg.rTitle = resultTitle.rajma;
             pkg.rDes = resultDes.rajma;
+            pkg.foodimg = imgs.rajma;
         }
-        document.querySelector(".sel42").style.display = "none";
+        document.querySelector(".sel43").style.display = "none";
     }
     
     /*=====================    KJ    ======================*/
@@ -345,24 +362,33 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.kimchistew;
+            pkg.rDes = resultDes.kimchistew;
+            pkg.foodimg = imgs.kimchistew;
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.misosoup;
+            pkg.rDes = resultDes.misosoup;
+            pkg.foodimg = imgs.misosoup;
         }
     }
     
     if(pkg.sel1 == selection.KJ && pkg.sel2 == selection.rice && el.textContent == "No Soup"){
         pkg.sel3 = "";
         var num1 = Math.random(),
-            num2 = Math.random();
-        if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
-        } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            num2 = Math.random(),
+            num3 = Math.random();
+        if(Math.max(num1, num2, num3) == num1){
+            pkg.rTitle = resultTitle.koreanbbq;
+            pkg.rDes = resultDes.koreanbbq;
+            pkg.foodimg = imgs.koreanbbq;
+        } else if(Math.max(num1, num2, num3) == num2){
+            pkg.rTitle = resultTitle.sushi;
+            pkg.rDes = resultDes.sushi;
+            pkg.foodimg = imgs.sushi;
+        } else if(Math.max(num1, num2, num3) == num3){
+            pkg.rTitle = resultTitle.bibimbap;
+            pkg.rDes = resultDes.Bibimbap;
+            pkg.foodimg = imgs.bibimbap;
         }
         document.querySelector(".sel43").style.display = "none";
     }
@@ -372,11 +398,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.ramen;
+            pkg.rDes = resultDes.ramen;
+            pkg.foodimg = imgs.ramen;
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.udon;
+            pkg.rDes = resultDes.udon;
+            pkg.foodimg = imgs.udon;
         }
     }
     
@@ -385,11 +413,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.sashimi;
+            pkg.rDes = resultDes.sashimi;
+            pkg.foodimg = imgs.sashimi;
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.mandu;
+            pkg.rDes = resultDes.mandu;
+            pkg.foodimg = imgs.mandu;
         }
         document.querySelector(".sel43").style.display = "none";
     }
@@ -401,11 +431,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.cheeseburger;
+            pkg.rDes = resultDes.cheesburger;
+            pkg.foodimg = imgs.cheeseburger
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.pepperonipizza
+            pkg.rDes = resultDes.pepperoniPizza
+            pkg.foodimg = imgs.pepperonipizza
         }
     }
     
@@ -414,11 +446,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.salmongreeksalad
+            pkg.rDes = resultDes.salmonGreek
+            pkg.foodimg = imgs.salmongreeksalad
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.steak;
+            pkg.rDes = resultDes.steakWedge;
+            pkg.foodimg = imgs.steak;
         }
         document.querySelector(".sel43").style.display = "none";
     }
@@ -428,11 +462,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.minestronesoup;
+            pkg.rDes = resultDes.minstrone;
+            pkg.foodimg = imgs.minestronesoup;
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.squashsoup;
+            pkg.rDes = resultDes.butternut;
+            pkg.foodimg = imgs.squashsoup;
         }
     }
     
@@ -441,11 +477,13 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.dalchaawal;
-            pkg.rDes = resultDes.dalchaawal;
+            pkg.rTitle = resultTitle.quinoasalad;
+            pkg.rDes = resultDes.quinoa;
+            pkg.foodimg = imgs.quinoasalad;
         } else {
-            pkg.rTitle = resultTitle.rajma;
-            pkg.rDes = resultDes.rajma;
+            pkg.rTitle = resultTitle.kalepesto;
+            pkg.rDes = resultDes.kalePesto;
+            pkg.foodimg = imgs.kalepesto;
         }
         document.querySelector(".sel43").style.display = "none";
     }
@@ -456,6 +494,7 @@ function Step3(el){
     proxy.sel3 = pkg.sel3;
     proxy.rTitle = pkg.rTitle;
     proxy.rDes = pkg.rDes;
+    proxy.foodimg = pkg.foodimg;
     
     step3.style.display = "none";
     result.style.display = "grid";
@@ -475,6 +514,11 @@ function BackToStep1(){
 function BackToStep2(){
     step2.style.display = "grid";
     step3.style.display = "none";
+}
+
+function TryAgainBut(){
+    result.style.display = "none";
+    step1.style.display = "grid";
 }
 
 /*=======   UI FUNCTIONS     ==========*/
@@ -511,12 +555,16 @@ function ChangeSel3IconUI(val){
     document.querySelector(".sel43").src = val;
 }
 
-function ChangerTitleUI(val){
+function ChangeTitleUI(val){
     document.querySelector("#foodname").innerText = val;
     document.querySelector(".match-title").innerText = val;
 }
 
-function ChangerDesUI(val){
+function ChangeDesUI(val){
     document.querySelector("#rDes").innerText = val;
+}
+
+function ChangeFoodImgUI(val){
+    document.querySelector(".final-img").style.backgroundImage = "url(" + val + ")";
 }
 
