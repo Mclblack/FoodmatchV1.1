@@ -34,7 +34,7 @@ footer {
     grid-area:foot;
 }
 
-#back {
+#back1 {
     width:30px;
     bottom:0;
     left:0;
@@ -251,7 +251,7 @@ footer {
     grid-area:foot;
 }
 
-#back {
+#back2, #back3 {
     width:30px;
     bottom:15px;
     left:0;
@@ -376,9 +376,13 @@ footer {
     justify-content:center;
 }
 
-.sel21, .sel31, .sel32, .sel41, .sel42, .sel43 {
+.sel21, .sel31, .sel32{
     width:80px;
     margin-right:10px;
+}
+
+.icons {
+    width:70px;
 }
 
 /* Step 2 Animation */
@@ -466,10 +470,11 @@ footer {
         height:120px;
     }
     
-    .sel21, .sel31, .sel32, .sel41, .sel42, .sel43{
+    .sel21, .sel31, .sel32{
         width:150px;
         height:auto;
     }
+    
     
     
 }
@@ -482,7 +487,6 @@ body {
 }
 
 #app4 {
-    
     background-image: url(../img/background.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -523,7 +527,7 @@ body {
 .match-title {
     font-family: ranchers;
     color: white;
-    font-size: 24pt;
+    font-size: 20pt;
     margin: 6px;
     text-shadow:
         2px 0 0 #000,
@@ -604,10 +608,12 @@ p {
     justify-content: center;
 }
 
+/*
 img {
     width: 50px;
 
 }
+*/
 
 .meat-icon {
     margin-left: 10px;
@@ -668,7 +674,7 @@ img {
 
 @media screen and (min-width: 768px) {
     #app4 {
-        background-image: url(../img/background%20_tablet.svg);
+        background-image: url(../img/background_tablet.svg);
         grid-template-columns: repeat(5), 1fr;
         grid-template-rows: 14% 60% 6% 13%;
         grid-template-areas:

@@ -1,3 +1,8 @@
+var step1 = document.querySelector("#app1"),
+    step2 = document.querySelector("#app2"),
+    step3 = document.querySelector("#app3"),
+    result = document.querySelector("#app4");
+
 var selection = {
     western : "img/icons/western.svg",
     KJ : "img/icons/japan.svg",
@@ -7,7 +12,8 @@ var selection = {
     noodles : "img/icons/noodles-icon.svg",
     rice : "img/icons/rice-icon.svg",
     soup : "img/icons/soup-icon.svg",
-    spicy : "img/icons/spicy-icon.svg"
+    spicy : "img/icons/spicy-icon.svg",
+    bread : "img/icons/bread-icon.svg"
 }
 
 var patterns = {
@@ -51,7 +57,52 @@ var resultTitle = {
     spciylentilquinoacurry : "Spicy Lentil Quinoa Curry",
     indiandahl : "Indian Dahl",
     dalchaawal : "Dal Chaawal",
-    rajma : "Rajma"
+    rajma : "Rajma",
+    kimchistew : "Kimchi Stew",
+    misosoup : "Miso Soup",
+    koreanbbq : "Korean BBQ",
+    sushi : "Sushi",
+    bibimbap : "bibimbap",
+    ramen : "Ramen",
+    udon : "Udon",
+    sashimi : "Sashimi",
+    mandu : "Mandu",
+    cheeseburger : "CheeseBurger",
+    pepperonipizza : "Pepperoni Pizza",
+    salmongreeksalad : "Salmon with Greek Salad",
+    steak : "Steak with Wedge Potatoes",
+    minestronesoup : "Classic Minestrone Soup",
+    squashsoup : "Roasted Butternut squash soup",
+    quinoasalad : "Quinoa Salad",
+    kalepesto : "Super Kale Pesto"
+}
+
+var imgs = {
+    kolhapuri : "img/foodimgs/kolhapuri.jpg",
+    kozhicurry : "img/foodimgs/kozhicurry.jpg",
+    paprichaat : "img/foodimgs/paparichaat.jpg",
+    tandoorichicken : "img/foodimgs/tandoorichicken.jpg",
+    spciylentilquinoacurry : "img/foodimgs/lentilcurry.jpg",
+    indiandahl : "img/foodimgs/dahl.jpg",
+    dalchaawal : "img/foodimgs/dalchaawal.jpg",
+    rajma : "img/foodimgs/rajma.JPG",
+    kimchistew : "img/foodimgs/kimchistew.JPG",
+    misosoup : "img/foodimgs/misosoup.jpg",
+    koreanbbq : "img/foodimgs/koreanbbq.jpg",
+    sushi : "img/foodimgs/sushi.jpg",
+    bibimbap : "img/foodimgs/bibimbap.jpg",
+    ramen : "img/foodimgs/ramen.jpg",
+    udon : "img/foodimgs/udon.jpg",
+    sashimi : "img/foodimgs/sashimi.jpg",
+    mandu : "img/foodimgs/mandu.jpg",
+    cheeseburger : "img/foodimgs/burger.jpg",
+    pepperonipizza : "img/foodimgs/pizza.jpg",
+    salmongreeksalad : "greeksalad.jpg",
+    steak : "img/foodimgs/steak.jpg",
+    minestronesoup : "img/foodimgs/minestrone.jpg",
+    squashsoup : "img/foodimgs/butternut.jpg",
+    quinoasalad : "img/foodimgs/quinoasalad.jpg",
+    kalepesto : "img/foodimgs/kalepesto.jpg"
 }
 
 var resultDes = {
@@ -153,8 +204,8 @@ function Step1(el){
     proxy.sel1 = pkg.sel1;
     
    
-    document.querySelector("#app1").style.display = "none";
-    document.querySelector("#app2").style.display = "grid";
+    step1.style.display = "none";
+    step2.style.display = "grid";
     }
 
 
@@ -173,10 +224,7 @@ function Step2(el){
         pkg.ctName4 = categories.veggie2;
         pkg.sel2 = selection.veggie;
     }
-  
-    proxy.ctName3 = pkg.ctName3;
-    proxy.ctName4 = pkg.ctName4;
-    proxy.sel2 = pkg.sel2;
+ 
     
     /////JAPANESE/KOREAN
     if(pkg.sel1 == selection.KJ && el.textContent == "Rice"){
@@ -188,44 +236,37 @@ function Step2(el){
       if(pkg.sel1 == selection.KJ && el.textContent == "No Rice"){
         pkg.ctName3 = categories.noRice1;
         pkg.ctName4 = categories.noRice2;
-        pkg.sel2 = selection.noRice;
+        pkg.sel2 = "";
+        document.querySelector(".sel42").style.display = "none";  
+        document.querySelector(".sel32").style.display = "none";  
     }
-    proxy.ctName3 = pkg.ctName3;
-    proxy.ctName4 = pkg.ctName4;
-    proxy.sel2 = pkg.sel2;
     
     /////WESTERN
     
        if(pkg.sel1 == selection.western && el.textContent == "Meat"){
         pkg.ctName3 = categories.westMeat1;
         pkg.ctName4 = categories.westMeat2;
-        pkg.sel2 = selection.western;
+        pkg.sel2 = selection.meat;
     }
-    
-     if(pkg.sel1 == selection.western && el.textContent == "Meat"){
-        pkg.ctName3 = categories.westMeat1;
-        pkg.ctName4 = categories.westMeat2;
-        pkg.sel2 = selection.western;
-    }
-    
+         
       if(pkg.sel1 == selection.western && el.textContent == "Veggie"){
         pkg.ctName3 = categories.westVeg1;
         pkg.ctName4 = categories.westVeg2;
-        pkg.sel2 = selection.western;
+        pkg.sel2 = selection.veggie;
     }
-    
-    
-    
-    
+        
     proxy.ctName3 = pkg.ctName3;
     proxy.ctName4 = pkg.ctName4;
     proxy.sel2 = pkg.sel2;
     
-    document.querySelector("#app2").style.display = "none";
-    document.querySelector("#app3").style.display = "grid";
+    step2.style.display = "none";
+    step3.style.display = "grid";
 }
 
 function Step3(el){
+    
+    /*==================  IDIAN  ========================*/
+    
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "Spicy"){
         pkg.sel3 = selection.spicy;
         var num1 = Math.random(),
@@ -251,7 +292,7 @@ function Step3(el){
             pkg.rTitle = resultTitle.tandoorichicken;
             pkg.rDes = resultDes.tandoorichicken;
         }
-        
+        document.querySelector(".sel43").style.display = "none";
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "Spicy"){
@@ -279,18 +320,147 @@ function Step3(el){
             pkg.rTitle = resultTitle.rajma;
             pkg.rDes = resultDes.rajma;
         }
-        
+        document.querySelector(".sel42").style.display = "none";
     }
+    
+    /*=====================    KJ    ======================*/
+    
+    if(pkg.sel1 == selection.KJ && pkg.sel2 == selection.rice && el.textContent == "Soup"){
+        pkg.sel3 = selection.soup;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+    }
+    
+    if(pkg.sel1 == selection.KJ && pkg.sel2 == selection.rice && el.textContent == "No Soup"){
+        pkg.sel3 = "";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+        document.querySelector(".sel43").style.display = "none";
+    }
+    
+    if(pkg.sel1 == selection.KJ && pkg.sel2 == "" && el.textContent == "Noodle"){
+        pkg.sel3 = selection.noodles;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+    }
+    
+    if(pkg.sel1 == selection.KJ && pkg.sel2 == "" && el.textContent == "No Noodle"){
+        pkg.sel3 = "";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+        document.querySelector(".sel43").style.display = "none";
+    }
+    
+    /*=========================  WESTERN  ==================================*/
+    
+    if(pkg.sel1 == selection.western && pkg.sel2 == selection.meat && el.textContent == "Bread"){
+        pkg.sel3 = selection.bread;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+    }
+    
+    if(pkg.sel1 == selection.western && pkg.sel2 == selection.meat && el.textContent == "No Bread"){
+        pkg.sel3 = "";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+        document.querySelector(".sel43").style.display = "none";
+    }
+    
+    if(pkg.sel1 == selection.western && pkg.sel2 == selection.veggie && el.textContent == "Soup"){
+        pkg.sel3 = selection.soup;
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+    }
+    
+    if(pkg.sel1 == selection.western && pkg.sel2 == selection.veggie && el.textContent == "No Soup"){
+        pkg.sel3 = "";
+        var num1 = Math.random(),
+            num2 = Math.random();
+        if(num1 < num2){
+            pkg.rTitle = resultTitle.dalchaawal;
+            pkg.rDes = resultDes.dalchaawal;
+        } else {
+            pkg.rTitle = resultTitle.rajma;
+            pkg.rDes = resultDes.rajma;
+        }
+        document.querySelector(".sel43").style.display = "none";
+    }
+    
+    
+    
     
     proxy.sel3 = pkg.sel3;
     proxy.rTitle = pkg.rTitle;
     proxy.rDes = pkg.rDes;
     
-    document.querySelector("#app3").style.display = "none";
-    document.querySelector("#app4").style.display = "grid";
+    step3.style.display = "none";
+    result.style.display = "grid";
 }
 
+/*=================  BACK BUTTONS =========================*/
 
+function BackToHome(){
+    window.location.href = "index.html";
+}
+
+function BackToStep1(){
+    step1.style.display = "grid";
+    step2.style.display = "none";
+}
+
+function BackToStep2(){
+    step2.style.display = "grid";
+    step3.style.display = "none";
+}
 
 /*=======   UI FUNCTIONS     ==========*/
 
