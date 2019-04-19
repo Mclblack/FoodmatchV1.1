@@ -1,4 +1,9 @@
- function startBut(){
+function closeBtn(){
+    var popCont = document.querySelector("#popUp");
+    popCont.style.display = "none";
+}
+
+function startBut(){
      document.querySelector("#get-started").style.fontSize = 30 + "pt";
      setTimeout(function(){
          window.location.href = "steps.html";
@@ -8,10 +13,6 @@
 
 var welcomePop = document.querySelector("#popUp");
 
-function ClseBtn(){
-    welcomePop.style.display = "none";
-    sessionStorage.setItem("EnterNum",1);
-}
 
 function BtnAbout(){
     window.location.href = "about.html";
@@ -19,6 +20,6 @@ function BtnAbout(){
 
 window.addEventListener("load", function(){
     if(sessionStorage.getItem("EnterNum") == 1){
-        welcomePop.style.display = "none";
+        popCont.style.display = "none";
     }
 })
