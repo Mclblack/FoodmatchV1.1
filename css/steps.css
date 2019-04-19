@@ -530,6 +530,7 @@ body {
     color: white;
     font-size: 20pt;
     margin: 6px;
+/*
     text-shadow:
         2px 0 0 #000,
         -2px 0 0 #000,
@@ -540,6 +541,7 @@ body {
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 5px #000;
+*/
     letter-spacing: 4px;
 }
 
@@ -622,6 +624,7 @@ img {
 
 }
 
+
 /*try again btn*/
 
 #again {
@@ -631,8 +634,16 @@ img {
     font-family: mali;
     font-weight: bold;
     font-size: 12pt;
+}
 
 
+#back4 {
+    bottom:0;
+    left:0;
+    position:absolute;
+    width:30px;
+    margin-bottom:5px;
+    margin-left:5px;
 }
 
 .popup {
