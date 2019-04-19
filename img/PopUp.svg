@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <link href="css/index.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mali|Ranchers" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
- 
-<body>
-
-    
-        <div id="popUp">
-            
-            <div id="poptitle">FoodMatch</div>
-           
-
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -214,10 +197,11 @@
 	.st191{fill:none;}
 	.st192{font-family:'Mali-Regular';}
 	.st193{font-size:15.0316px;}
-	.st194{fill:#FEDCBD;}
-	.st195{fill:#F48064;}
-	.st196{fill:#FCFAFA;}
-	.st197{font-size:21.4738px;}
+	.st194{font-size:21.4738px;}
+	.st195{font-family:'Ranchers-Regular';}
+	.st196{font-size:40.8001px;}
+	.st197{letter-spacing:4.8;}
+	.st198{fill:#FEDCBD;}
 </style>
 <g id="Layer_1">
 	<rect x="0.5" class="st0" width="339.5" height="460"/>
@@ -2196,91 +2180,21 @@
 	<rect x="98.4" y="105.2" class="st191" width="143.8" height="22"/>
 	<text transform="matrix(0.8309 0 0 1 143.1391 118.311)" class="st192 st193">Welcome</text>
 	<rect x="102.8" y="379.9" class="st191" width="143.8" height="22"/>
-	<rect x="429.7" y="458" class="st191" width="72.1" height="27.2"/>
+	<text transform="matrix(0.8309 0 0 1 150.9066 398.6758)" class="st192 st194">Close</text>
 	<rect x="113.4" y="127.2" class="st191" width="113.7" height="22"/>
 	<text transform="matrix(0.8309 0 0 1 163.8207 140.3218)" class="st192 st193">to</text>
 	<rect x="66.3" y="151.4" class="st191" width="207.9" height="44"/>
+	<text transform="matrix(0.8309 0 0 1 75.6939 185.7422)" class="st195 st196 st197">FoodMatch</text>
 	<rect x="54.2" y="204.4" class="st191" width="241.7" height="125.5"/>
 	<text transform="matrix(0.8309 0 0 1 57.2377 217.4893)" class="st192 st193">This app was built to help indecisive </text>
 	<text transform="matrix(0.8309 0 0 1 51.3392 243.2891)" class="st192 st193">people (like us) make quicker decision </text>
 	<text transform="matrix(0.8309 0 0 1 55.9076 268.9893)" class="st192 st193">regarding food.  Thanks for stopping </text>
 	<text transform="matrix(0.8309 0 0 1 52.9174 294.7891)" class="st192 st193">by and we hope you find your perfect </text>
 	<text transform="matrix(0.8309 0 0 1 133.0131 320.5889)" class="st192 st193">FoodMatch!</text>
-	<rect x="2.1" y="355.4" class="st194" width="335.8" height="104.6"/>
+	<rect x="2.3" y="353.4" class="st198" width="335.8" height="104.6"/>
+	<rect x="134.2" y="404.2" class="st191" width="72.1" height="27.2"/>
 	<polygon class="st190" points="170.3,382.5 154.4,353.4 186.1,353.4 	"/>
 </g>
-<g id="closeBtn" onclick="closeBtn()">
-	<path class="st195" d="M189,432h-44c-6.6,0-12-5.4-12-12v-6.1c0-6.6,5.4-12,12-12h44c6.6,0,12,5.4,12,12v6.1
-		C201,426.6,195.6,432,189,432z"/>
-	<text transform="matrix(0.8309 0 0 1 143.2573 423.7996)" class="st196 st192 st197">Close</text>
+<g id="closeBtn">
 </g>
 </svg>
-
-
-
-        </div>
-
-
-  
-
-
-    <div id="app">
-
-
-        <img src="img/logo.svg" id="logo">
-
-
-
-        <div class="main-content-icons">
-
-
-
-            <div class="ic-div ic-div-1">
-                <div class="ic-div-1-1 in-ci-divs">
-                    <img src="img/icons/rice-icon.svg" class="icons">
-                    <img src="img/icons/%20veggie-icon.svg" class="icons">
-                    <img src="img/icons/western.svg" class="icons">
-                    <img src="img/icons/spicy-icon.svg" class="icons">
-                    <img src="img/icons/meat-icon.svg" class="icons">
-                    <img src="img/icons/bread-icon.svg" class="icons">
-
-
-                </div>
-            </div>
-            <div class="ic-div ic-div-2">
-                <div class="ic-div-2-1 in-ci-divs">
-                    <img src="img/icons/spicy-icon.svg" class="icons">
-                    <img src="img/icons/noodles-icon.svg" class="icons">
-                    <img src="img/icons/soup-icon.svg" class="icons">
-                    <img src="img/icons/rice-icon.svg" class="icons">
-                    <img src="img/icons/japan.svg" class="icons">
-                    <img src="img/icons/meat-icon.svg" class="icons">
-                </div>
-            </div>
-            <div class="ic-div ic-div-3">
-                <div class="ic-div-3-1 in-ci-divs">
-                    <img src="img/icons/soup-icon.svg" class="icons">
-                    <img src="img/icons/bread-icon.svg" class="icons">
-                    <img src="img/icons/indian.svg" class="icons">
-                    <img src="img/icons/noodles-icon.svg" class="icons">
-                    <img src="img/icons/%20veggie-icon.svg" class="icons">
-                    <img src="img/icons/rice-icon.svg" class="icons">
-                </div>
-            </div>
-
-        </div>
-
-        <div id="get-started" onclick="startBut()">
-            <div id="get-started-text">Get Started</div>
-        </div>
-
-        <div id="about" onclick="BtnAbout()">
-            <div>About</div>
-
-        </div>
-
-    </div>
-
-    <script src="js/index.js"></script>
-</body>
-</html>

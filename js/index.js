@@ -12,7 +12,7 @@ function startBut(){
 
  }
 
-var welcomePop = document.querySelector("#popUp");
+//var welcomePop = document.querySelector("#popUp");
 
 
 function BtnAbout(){
