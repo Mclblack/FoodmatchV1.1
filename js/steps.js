@@ -85,7 +85,7 @@ var resultTitle = {
 var imgs = {
     kolhapuri : "img/foodimgs/kolhapuri.jpg",
     kozhicurry : "img/foodimgs/kozhicurry.jpg",
-    paprichaat : "img/foodimgs/paparichaat.jpg",
+    paprichaat : "img/foodimgs/paprichaat.jpg",
     tandoorichicken : "img/foodimgs/tandoorichicken.jpg",
     spciylentilquinoacurry : "img/foodimgs/lentilcurry.jpg",
     indiandahl : "img/foodimgs/dahl.jpg",
@@ -113,7 +113,7 @@ var imgs = {
 var resultDes = {
     kolhapuri : "Congratulations!  Based off your selections we'd recommend Kolhapuri Chicken! This is a very spicy and full flavoured dish, with unique flavors that comes from the fresh ground spices and grated coconut.  You can find this dish at the restaurents listed below.  Enjoy!",
     kozhicurry : "Kozhi Curry is a flavorful, thick curry from Southern India.  This curry mouthwatering flavour laregly comes the coconut oil, coconut milk and unique blend of spices used.  This is a deliciously spicy curry, we recommend the restaurents below for the best verisons of the delicatable dish!",
-    paprichaat : "Papri chaat is a popular traditional street food from India. This dish is typically a sweet, sour and tangy with a creamy & crunchy texture.  Based off your selections we think that this dish is a perfect fit for you!  You can find this dish locally at the restaurents listed below.",
+    paprichaat : "Papri chaat is a popular traditional street food from India. This dish is typically a sweet, sour and tangy with a creamy &amp; crunchy texture.  Based off your selections we think that this dish is a perfect fit for you!  You can find this dish locally at the restaurents listed below.",
     tandoorichicken : "Tandoori Chicken is a chicken dish prepared by roasting chicken marinated in yoghurt and spices.  The dish originated from the Indian subcontinent and is popular in many parts of the world.  You can find many version of this popular dish in Vancouver but we recommend the spots listed below.  Enjoy!",
     spciylentilquinoacurry : "This lentil curry is a so delicious due to the use of coconut milk late in the cooking process.  Try this amazing dish at one of the restaurents we've recommended below.  Many people try to make this dish but few do it as well as the restaurants below.  Enjoy!",
     indiandahl : "Dahl is a popular lentil dish, full of flavour!  It's a popular dish all over the world and is commonly flavoured with many spicy's.  It is commonly served on rice and can be made to be as spicy as you prefer.  Check out the restaurents listed below to try this delicious dish!",
@@ -152,7 +152,8 @@ var pkg = {
     bgPt1 : "",
     rTitle : "",
     rDes : "",
-    foodimg : ""
+    foodimg : "",
+    popupImg : "",
 }
 
 /*=======   HANDLER  =========*/
@@ -315,10 +316,12 @@ function Step3(el){
             pkg.rTitle = resultTitle.kolhapuri;
             pkg.rDes = resultDes.kolhapuri;
             pkg.foodimg = imgs.kolhapuri;
+            pkg.popupImg = imgs.kolhapuri;
         } else {
             pkg.rTitle = resultTitle.kozhicurry;
             pkg.rDes = resultDes.kozhicurry;
             pkg.foodimg = imgs.kozhicurry;
+            pkg.popupImg = imgs.kozhicurry;
         }
         result_icon3.style.display = "inline-block";
     }
@@ -331,10 +334,12 @@ function Step3(el){
             pkg.rTitle = resultTitle.paprichaat;
             pkg.rDes = resultDes.paprichaat;
             pkg.foodimg = imgs.paprichaat;
+            pkg.popupImg = imgs.paprichaat;
         } else {
             pkg.rTitle = resultTitle.tandoorichicken;
             pkg.rDes = resultDes.tandoorichicken;
             pkg.foodimg = imgs.tandoorichicken;
+            pkg.fpopupImg = imgs.tandoorichicken;
         }
         result_icon3.style.display = "none";
     }
@@ -347,10 +352,12 @@ function Step3(el){
             pkg.rTitle = resultTitle.spciylentilquinoacurry;
             pkg.rDes = resultDes.spciylentilquinoacurry;
             pkg.foodimg = imgs.spciylentilquinoacurry;
+            pkg.popupImg = imgs.spciylentilquinoacurry;
         } else {
             pkg.rTitle = resultTitle.indiandahl;
             pkg.rDes = resultDes.indiandahl;
             pkg.foodimg = imgs.indiandahl;
+            pkg.popupImg = imgs.indiandahl;
         }
         result_icon3.style.display = "inline-block";
     }
@@ -363,10 +370,12 @@ function Step3(el){
             pkg.rTitle = resultTitle.dalchaawal;
             pkg.rDes = resultDes.dalchaawal;
             pkg.foodimg = imgs.dalchaawal;
+            pkg.popupImg = imgs.dalchaawal;
         } else {
             pkg.rTitle = resultTitle.rajma;
             pkg.rDes = resultDes.rajma;
             pkg.foodimg = imgs.rajma;
+            pkg.popupImg = imgs.rajma;
         }
         result_icon3.style.display = "none";
     }
@@ -381,10 +390,12 @@ function Step3(el){
             pkg.rTitle = resultTitle.kimchistew;
             pkg.rDes = resultDes.kimchistew;
             pkg.foodimg = imgs.kimchistew;
+            pkg.popupImg = imgs.kimchistew;
         } else {
             pkg.rTitle = resultTitle.misosoup;
             pkg.rDes = resultDes.misosoup;
             pkg.foodimg = imgs.misosoup;
+            pkg.popupImg = imgs.misosoup;
         }
         result_icon3.style.display = "inline-block";
     }
@@ -398,14 +409,20 @@ function Step3(el){
             pkg.rTitle = resultTitle.koreanbbq;
             pkg.rDes = resultDes.koreanbbq;
             pkg.foodimg = imgs.koreanbbq;
+            pkg.popupImg = imgs.koreanbbq;
+            
         } else if(Math.max(num1, num2, num3) == num2){
             pkg.rTitle = resultTitle.sushi;
             pkg.rDes = resultDes.sushi;
             pkg.foodimg = imgs.sushi;
+            pkg.popupImg = imgs.sushi;
+            
         } else if(Math.max(num1, num2, num3) == num3){
             pkg.rTitle = resultTitle.bibimbap;
             pkg.rDes = resultDes.Bibimbap;
             pkg.foodimg = imgs.bibimbap;
+            pkg.popupImg = imgs.bibimbap;
+            
         }
         result_icon3.style.display = "none";
     }
@@ -418,10 +435,14 @@ function Step3(el){
             pkg.rTitle = resultTitle.ramen;
             pkg.rDes = resultDes.ramen;
             pkg.foodimg = imgs.ramen;
+            pkg.popupImg = imgs.ramen;
+            
         } else {
             pkg.rTitle = resultTitle.udon;
             pkg.rDes = resultDes.udon;
             pkg.foodimg = imgs.udon;
+            pkg.popupImg = imgs.udon;
+            
         }
         result_icon3.style.display = "inline-block";
     }
@@ -434,10 +455,14 @@ function Step3(el){
             pkg.rTitle = resultTitle.sashimi;
             pkg.rDes = resultDes.sashimi;
             pkg.foodimg = imgs.sashimi;
+            pkg.popupImg = imgs.sashimi;
+            
         } else {
             pkg.rTitle = resultTitle.mandu;
             pkg.rDes = resultDes.mandu;
             pkg.foodimg = imgs.mandu;
+            pkg.popupImg = imgs.mandu;
+            
         }
         result_icon3.style.display = "none";
     }
@@ -451,11 +476,14 @@ function Step3(el){
         if(num1 < num2){
             pkg.rTitle = resultTitle.cheeseburger;
             pkg.rDes = resultDes.cheesburger;
-            pkg.foodimg = imgs.cheeseburger
+            pkg.foodimg = imgs.cheeseburger;
+            pkg.popupImg = imgs.cheeseburger;
+            
         } else {
-            pkg.rTitle = resultTitle.pepperonipizza
-            pkg.rDes = resultDes.pepperoniPizza
-            pkg.foodimg = imgs.pepperonipizza
+            pkg.rTitle = resultTitle.pepperonipizza;
+            pkg.rDes = resultDes.pepperoniPizza;
+            pkg.foodimg = imgs.pepperonipizza;
+            pkg.popupImg = imgs.pepperonipizza
         }
         result_icon3.style.display = "inline-block";
     }
@@ -465,13 +493,17 @@ function Step3(el){
         var num1 = Math.random(),
             num2 = Math.random();
         if(num1 < num2){
-            pkg.rTitle = resultTitle.salmongreeksalad
-            pkg.rDes = resultDes.salmonGreek
-            pkg.foodimg = imgs.salmongreeksalad
+            pkg.rTitle = resultTitle.salmongreeksalad;
+            pkg.rDes = resultDes.salmonGreek;
+            pkg.foodimg = imgs.salmongreeksalad;
+            pkg.popupImg = imgs.salmongreeksalad;
+            
         } else {
             pkg.rTitle = resultTitle.steak;
             pkg.rDes = resultDes.steakWedge;
             pkg.foodimg = imgs.steak;
+            pkg.popupImg = imgs.steak;
+            
         }
         result_icon3.style.display = "none";
     }
@@ -484,10 +516,14 @@ function Step3(el){
             pkg.rTitle = resultTitle.minestronesoup;
             pkg.rDes = resultDes.minstrone;
             pkg.foodimg = imgs.minestronesoup;
+            pkg.popupImg = imgs.minestronesoup;
+            
         } else {
             pkg.rTitle = resultTitle.squashsoup;
             pkg.rDes = resultDes.butternut;
             pkg.foodimg = imgs.squashsoup;
+            pkg.popupImg = imgs.squashsoup;
+            
         }
         result_icon3.style.display = "inline-block";
     }
@@ -500,10 +536,14 @@ function Step3(el){
             pkg.rTitle = resultTitle.quinoasalad;
             pkg.rDes = resultDes.quinoa;
             pkg.foodimg = imgs.quinoasalad;
+            pkg.popupImg = imgs.quinoasalad;
+
         } else {
             pkg.rTitle = resultTitle.kalepesto;
             pkg.rDes = resultDes.kalePesto;
             pkg.foodimg = imgs.kalepesto;
+            pkg.popupImg = imgs.kalepesto;
+            
         }
         result_icon3.style.display = "none";
     }
@@ -515,6 +555,7 @@ function Step3(el){
     proxy.rTitle = pkg.rTitle;
     proxy.rDes = pkg.rDes;
     proxy.foodimg = pkg.foodimg;
+    proxy.popupImg = pkg.popupImg;
     
     step3.style.display = "none";
     result.style.display = "grid";
@@ -586,6 +627,7 @@ function ChangeDesUI(val){
 
 function ChangeFoodImgUI(val){
     document.querySelector(".final-img").style.backgroundImage = "url(" + val + ")";
+    document.querySelector(".popup-img").src = val;
 }
 
 function TriggerPopUp(){
