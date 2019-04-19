@@ -62,10 +62,11 @@ footer {
     width:50px;
     padding:5px;
     border-radius:20px;
+    border:1px solid #A13324;
+    background-color:rgba(203,87,67,.6);
 }
 
-.step1 {
-    border:1px solid #A13324;
+.step11, .step22, .step33 {
     background-image: linear-gradient(to bottom right,rgba(203,87,67,.8),#CB5743);
     animation:pulse .8s alternate;
     animation-direction:alternate-reverse;
@@ -662,8 +663,9 @@ img {
     color: white;
     font-size: 22px;
     font-family: mali;
-    top: 0;
-    right: 0
+    top: 10px;
+    right: 10px;
+    width: 40px;
 }
 
 .descrip {
@@ -747,6 +749,7 @@ img {
         color: white;
         font-size: 22px;
         font-family: mali;
+        width:50px;
 
 
     }

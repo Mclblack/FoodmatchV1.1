@@ -1,5 +1,6 @@
+var popCont = document.querySelector("#popUp");
+
 function closeBtn(){
-    var popCont = document.querySelector("#popUp");
     popCont.style.display = "none";
 }
 

@@ -91,7 +91,7 @@ footer {
 
 @media screen and (min-width: 768px){
     #app {
-        background-image:url(../img/background%20_tablet.svg);
+        background-image:url(../img/background_tablet.svg);
         grid-template-columns:repeat(5), 1fr;
         grid-template-rows:25% 62% 13%;
         grid-template-areas:

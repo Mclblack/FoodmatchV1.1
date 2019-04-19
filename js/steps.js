@@ -1,7 +1,12 @@
 var step1 = document.querySelector("#app1"),
     step2 = document.querySelector("#app2"),
     step3 = document.querySelector("#app3"),
-    result = document.querySelector("#app4");
+    result = document.querySelector("#app4"),
+    step3_icon2 = document.querySelector(".sel32"),
+    result_icon2 = document.querySelector(".sel42"),
+    result_icon3 = document.querySelector(".sel43"),
+    popUp = document.querySelector(".popup"),
+    finalImg = document.querySelector(".final-img");
 
 var selection = {
     western : "img/icons/western.svg",
@@ -238,12 +243,16 @@ function Step2(el){
         pkg.ctName3 =  categories.meat1;
         pkg.ctName4 = categories.meat2;
         pkg.sel2 = selection.meat;
+        step3_icon2.style.display = "inline-block";
+        result_icon2.style.display = "inline-block"; 
     }
     
     if(pkg.sel1 == selection.indian && el.textContent == "Veggie"){
         pkg.ctName3 =  categories.veggie1;
         pkg.ctName4 = categories.veggie2;
         pkg.sel2 = selection.veggie;
+        step3_icon2.style.display = "inline-block";
+        result_icon2.style.display = "inline-block"; 
     }
  
     
@@ -252,14 +261,17 @@ function Step2(el){
         pkg.ctName3 = categories.rice1;
         pkg.ctName4 = categories.rice2;
         pkg.sel2 = selection.rice;
+        step3_icon2.style.display = "inline-block";
+        result_icon2.style.display = "inline-block"; 
     }
     
       if(pkg.sel1 == selection.KJ && el.textContent == "No Rice"){
         pkg.ctName3 = categories.noRice1;
         pkg.ctName4 = categories.noRice2;
         pkg.sel2 = "";
-        document.querySelector(".sel42").style.display = "none";  
-        document.querySelector(".sel32").style.display = "none";  
+        step3_icon2.style.display = "none";
+        result_icon2.style.display = "none";  
+          
     }
     
     /////WESTERN
@@ -268,12 +280,16 @@ function Step2(el){
         pkg.ctName3 = categories.westMeat1;
         pkg.ctName4 = categories.westMeat2;
         pkg.sel2 = selection.meat;
+        step3_icon2.style.display = "inline-block";
+        result_icon2.style.display = "inline-block"; 
     }
          
       if(pkg.sel1 == selection.western && el.textContent == "Veggie"){
         pkg.ctName3 = categories.westVeg1;
         pkg.ctName4 = categories.westVeg2;
         pkg.sel2 = selection.veggie;
+        step3_icon2.style.display = "inline-block";
+        result_icon2.style.display = "inline-block"; 
     }
         
     proxy.ctName3 = pkg.ctName3;
@@ -304,7 +320,7 @@ function Step3(el){
             pkg.rDes = resultDes.kozhicurry;
             pkg.foodimg = imgs.kozhicurry;
         }
-        
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.meat && el.textContent == "No Spicy"){
@@ -320,7 +336,7 @@ function Step3(el){
             pkg.rDes = resultDes.tandoorichicken;
             pkg.foodimg = imgs.tandoorichicken;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "Spicy"){
@@ -336,7 +352,7 @@ function Step3(el){
             pkg.rDes = resultDes.indiandahl;
             pkg.foodimg = imgs.indiandahl;
         }
-        
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.indian && pkg.sel2 == selection.veggie && el.textContent == "No Spicy"){
@@ -352,7 +368,7 @@ function Step3(el){
             pkg.rDes = resultDes.rajma;
             pkg.foodimg = imgs.rajma;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     /*=====================    KJ    ======================*/
@@ -370,6 +386,7 @@ function Step3(el){
             pkg.rDes = resultDes.misosoup;
             pkg.foodimg = imgs.misosoup;
         }
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.KJ && pkg.sel2 == selection.rice && el.textContent == "No Soup"){
@@ -390,7 +407,7 @@ function Step3(el){
             pkg.rDes = resultDes.Bibimbap;
             pkg.foodimg = imgs.bibimbap;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     if(pkg.sel1 == selection.KJ && pkg.sel2 == "" && el.textContent == "Noodle"){
@@ -406,6 +423,7 @@ function Step3(el){
             pkg.rDes = resultDes.udon;
             pkg.foodimg = imgs.udon;
         }
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.KJ && pkg.sel2 == "" && el.textContent == "No Noodle"){
@@ -421,7 +439,7 @@ function Step3(el){
             pkg.rDes = resultDes.mandu;
             pkg.foodimg = imgs.mandu;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     /*=========================  WESTERN  ==================================*/
@@ -439,6 +457,7 @@ function Step3(el){
             pkg.rDes = resultDes.pepperoniPizza
             pkg.foodimg = imgs.pepperonipizza
         }
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.western && pkg.sel2 == selection.meat && el.textContent == "No Bread"){
@@ -454,7 +473,7 @@ function Step3(el){
             pkg.rDes = resultDes.steakWedge;
             pkg.foodimg = imgs.steak;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     if(pkg.sel1 == selection.western && pkg.sel2 == selection.veggie && el.textContent == "Soup"){
@@ -470,6 +489,7 @@ function Step3(el){
             pkg.rDes = resultDes.butternut;
             pkg.foodimg = imgs.squashsoup;
         }
+        result_icon3.style.display = "inline-block";
     }
     
     if(pkg.sel1 == selection.western && pkg.sel2 == selection.veggie && el.textContent == "No Soup"){
@@ -485,7 +505,7 @@ function Step3(el){
             pkg.rDes = resultDes.kalePesto;
             pkg.foodimg = imgs.kalepesto;
         }
-        document.querySelector(".sel43").style.display = "none";
+        result_icon3.style.display = "none";
     }
     
     
@@ -568,3 +588,20 @@ function ChangeFoodImgUI(val){
     document.querySelector(".final-img").style.backgroundImage = "url(" + val + ")";
 }
 
+function TriggerPopUp(){
+
+  finalImg.style.opacity= "0";
+  popUp.style.opacity = "1";
+  popUp.style.zIndex = "2";
+
+}
+
+function closeBtn(){
+  popUp.style.opacity = "0";
+  popUp.style.zIndex = "0";
+  finalImg.style.opacity = "1";
+}
+
+function BackToHome(){
+    window.location.href = "index.html"
+}

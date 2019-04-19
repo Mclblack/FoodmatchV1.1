@@ -9,14 +9,14 @@
 <body>
     <div id="app1">
         <header class="logo-container">
-            <img src="img/logo.svg" id="logo">
+            <img src="img/logo.svg" id="logo" onclick="BackToHome()">
         </header>
         <div id="steps-container">
-            <div class="steps step1">STEP 1</div>
+            <div class="steps step11">STEP 1</div>
             <div class="triangle"></div>
-            <div class="steps step2">STEP 2</div>
+            <div class="steps">STEP 2</div>
             <div class="triangle"></div>
-            <div class="steps step3">STEP 3</div>
+            <div class="steps">STEP 3</div>
         </div>
         <div id="category-container">
             <div class="categories western" onclick="Step1(this)">Western</div>
@@ -31,14 +31,14 @@
 
     <div id="app2">
         <header class="logo-container">
-            <img src="img/logo.svg" id="logo">
+            <img src="img/logo.svg" id="logo" onclick="BackToHome()">
         </header>
         <div id="steps-container">
-            <div class="steps step1">STEP 1</div>
+            <div class="steps">STEP 1</div>
             <div class="triangle"></div>
-            <div class="steps step2">STEP 2</div>
+            <div class="steps step22">STEP 2</div>
             <div class="triangle"></div>
-            <div class="steps step3">STEP 3</div>
+            <div class="steps">STEP 3</div>
         </div>
         <div id="category-containers">
             <div class="categoriess ca1" onclick="Step2(this)">Meat</div>
@@ -59,14 +59,14 @@
     
     <div id="app3">
         <header class="logo-container">
-            <img src="img/logo.svg" id="logo">
+            <img src="img/logo.svg" id="logo" onclick="BackToHome()">
         </header>
         <div id="steps-container">
-            <div class="steps step1">STEP 1</div>
+            <div class="steps">STEP 1</div>
             <div class="triangle"></div>
-            <div class="steps step2">STEP 2</div>
+            <div class="steps">STEP 2</div>
             <div class="triangle"></div>
-            <div class="steps step3">STEP 3</div>
+            <div class="steps step33">STEP 3</div>
         </div>
         <div id="category-containers">
             <div class="categoriess ca3" onclick="Step3(this)">Meat</div>
@@ -87,19 +87,18 @@
     </div>
 
     <div id="app4">
-        <img src="img/logo.svg" id="logo">
+        <img src="img/logo.svg" id="logo" onclick="BackToHome()">
 
         <div id="main-cnt">
             <div class="popup">
                 <img src="img/foodimgs/paprichaat.jpg" class="popup-img" />
-                <div id="close" onclick="closeBtn()">Close
-                </div>
+                <img src="img/zoomout.png" id="close" onclick="closeBtn()" />
             </div>
 
             <div class="match-title">Papri Chaat</div>
 
             <div class="final-img">
-<!--                <img src="img/%20zoomIn.png" id="zoomIn" onclick="TriggerPopUp()" />-->
+                <img src="img/zoomin.png" id="zoomIn" onclick="TriggerPopUp()" />
             </div>
 
             <div class="descrip">
