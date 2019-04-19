@@ -2,6 +2,7 @@ var popCont = document.querySelector("#popUp");
 
 function closeBtn(){
     popCont.style.display = "none";
+    sessionStorage.setItem("EnterNum", 1);
 }
 
 function startBut(){
