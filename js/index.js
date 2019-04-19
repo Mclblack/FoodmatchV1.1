@@ -9,7 +9,7 @@ function startBut(){
      document.querySelector("#get-started").style.fontSize = 30 + "pt";
      setTimeout(function(){
          window.location.href = "steps.html";
-     },800);
+     },600);
 
  }
 

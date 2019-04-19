@@ -500,7 +500,7 @@ body {
         "main-cnt main-cnt main-cnt"
         "select select select"
         ". ic ."
-        ". again .";
+        "again again again";
     display:none;
 
 }
@@ -634,6 +634,7 @@ img {
     font-family: mali;
     font-weight: bold;
     font-size: 12pt;
+    position:relative;
 }
 
 
@@ -701,7 +702,7 @@ img {
             "main-cnt main-cnt main-cnt main-cnt main-cnt"
             ".  select select select ."
             "ic ic ic ic ic"
-            ". . again . .";
+            "again again again again again";
         display:none;
 
     }

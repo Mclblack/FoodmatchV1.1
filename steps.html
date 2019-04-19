@@ -34,7 +34,7 @@
             <img src="img/logo.svg" id="logo" onclick="BackToHome()">
         </header>
         <div id="steps-container">
-            <div class="steps">STEP 1</div>
+            <div class="steps" onclick="BackToStep1()">STEP 1</div>
             <div class="triangle"></div>
             <div class="steps step22">STEP 2</div>
             <div class="triangle"></div>
@@ -62,9 +62,9 @@
             <img src="img/logo.svg" id="logo" onclick="BackToHome()">
         </header>
         <div id="steps-container">
-            <div class="steps">STEP 1</div>
+            <div class="steps" onclick="BackToStep1()">STEP 1</div>
             <div class="triangle"></div>
-            <div class="steps">STEP 2</div>
+            <div class="steps" onclick="BackToStep2()">STEP 2</div>
             <div class="triangle"></div>
             <div class="steps step33">STEP 3</div>
         </div>
@@ -121,10 +121,11 @@
         </div>
 
 
-        <div id="again" onclick="TryAgainBut()">
-            Try Again
+        <div id="again" >
+            <img src="img/buttons/back.svg" id="back4" onclick="BackToStep3()">
+            <span onclick="TryAgainBut()">Try Again</span>
         </div>
-                    <img src="img/buttons/back.svg" id="back4" onclick="BackToStep2()">
+                    
 
         
 

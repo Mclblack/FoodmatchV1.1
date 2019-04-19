@@ -561,26 +561,7 @@ function Step3(el){
     result.style.display = "grid";
 }
 
-/*=================  BACK BUTTONS =========================*/
 
-function BackToHome(){
-    window.location.href = "index.html";
-}
-
-function BackToStep1(){
-    step1.style.display = "grid";
-    step2.style.display = "none";
-}
-
-function BackToStep2(){
-    step2.style.display = "grid";
-    step3.style.display = "none";
-}
-
-function TryAgainBut(){
-    result.style.display = "none";
-    step1.style.display = "grid";
-}
 
 /*=======   UI FUNCTIONS     ==========*/
 
@@ -644,6 +625,29 @@ function closeBtn(){
   finalImg.style.opacity = "1";
 }
 
+/*=================  BACK BUTTONS =========================*/
+
 function BackToHome(){
-    window.location.href = "index.html"
+    window.location.href = "index.html";
 }
+
+function BackToStep1(){
+    step1.style.display = "grid";
+    step2.style.display = "none";
+}
+
+function BackToStep2(){
+    step2.style.display = "grid";
+    step3.style.display = "none";
+}
+
+function BackToStep3(){
+    step3.style.display = "grid";
+    result.style.display = "none";
+}
+
+function TryAgainBut(){
+    result.style.display = "none";
+    step1.style.display = "grid";
+}
+
