@@ -640,7 +640,7 @@ function TriggerPopUp(){
 
 function closeBtn(){
   popUp.style.opacity = "0";
-  popUp.style.zIndex = "0";
+  popUp.style.zIndex = "-1";
   finalImg.style.opacity = "1";
 }
 
