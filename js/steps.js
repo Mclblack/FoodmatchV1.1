@@ -102,7 +102,7 @@ var imgs = {
     mandu : "img/foodimgs/mandu.jpg",
     cheeseburger : "img/foodimgs/burger.jpg",
     pepperonipizza : "img/foodimgs/pizza.jpg",
-    salmongreeksalad : "greeksalad.jpg",
+    salmongreeksalad : "img/foodimgs/greeksalad.jpg",
     steak : "img/foodimgs/steak.jpg",
     minestronesoup : "img/foodimgs/minestrone.jpg",
     squashsoup : "img/foodimgs/butternut.jpg",
